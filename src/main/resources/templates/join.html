@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/join.css">
+    <title>회원가입</title>
+</head>
+<body>
+    <div class="main">
+        <div class="login">
+            <h1 class="login-title">회원가입</h1>
+            <form action="/user/join" method="post">
+                <input type="text" class="id" name="id" placeholder="사용할 아이디">
+                <input type="text" class="password" name="password" placeholder="사용할 비밀번호">
+                <input type="text" class="name" name="name" placeholder="이름">
+                <input type="text" class="phone" name="phone" placeholder="전화번호">
+                <input type="text" class="email" name="email" placeholder="이메일">
+            </form>
+            <div class="btn-group">
+                <button class="join-btn">회원가입</button>
+                <button class="cancel-btn" onclick="location.href='login.html'">취소</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
