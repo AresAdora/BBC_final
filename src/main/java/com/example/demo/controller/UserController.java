@@ -12,17 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/user")
 public class UserController {
     private final UserService userService;
 
-    @GetMapping("/save-form")
-    public String saveForm() {
-        return "join";
-    }
+    @GetMapping("/join.html")
+    public String joinForm(){return "join";}
 
-    @PostMapping("/save")
-    public String save(@ModelAttribute UserDTO userDTO) {
+    @PostMapping("user/join")
+    public String save(@ModelAttribute() UserDTO userDTO) {
         userService.save(userDTO);
         return "index";
     }
